@@ -602,7 +602,8 @@ CxPlatRefIncrementNonZero(
     CXPLAT_REF_COUNT NewValue;
     CXPLAT_REF_COUNT OldValue;
 
-    PrefetchForWrite(RefCount);
+    //PrefetchForWrite(RefCount); // Path: Intrinsic not available with current Intel compiler.
+    __builtin_prefetch(RefCount, 1, 3 /* _MM_HINT_T0 */); // Path: Replace with Intel-friendly intrinsic.
     OldValue = QuicReadLongPtrNoFence(RefCount);
     for (;;) {
         NewValue = OldValue + Bias;
