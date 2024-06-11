@@ -1,6 +1,6 @@
 Fork of: https://github.com/microsoft/msquic
 
-Modified to compile for Path with Intel compiler and MSVC 2022.
+Modified to compile for Path with Intel compiler, MSVC 2022, and Whole Program Optimization.
 
 Powershell:
 
@@ -10,4 +10,7 @@ Then:
 
 `./scripts/build.ps1 -Config Release -Arch x64 -Static -Tls schannel -DisableLogs -DisableTools -DisablePerf -DisableTest -StaticCRT -PGO -Clean`
 
-Access .sln in build folder, change projects to use Intel compiler, enable all optimizations as well as Whole Program Optimization.
+* Access .sln in build folder, change projects to use Intel compiler.
+* Enable all optimizations, as well as Whole Program Optimization and Link Time Code Generation.
+* Disable warnings as errors on all projects.
+* Build within MSVC with Intel compiler.
