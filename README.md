@@ -2,7 +2,7 @@ Fork of: https://github.com/microsoft/msquic
 
 To merge with latest msquic, use: `git rebase upstream/main`
 
-Modified to compile for Path with Intel compiler and MSVC 2022.
+Modified to compile for Path with Intel compiler and MSVC 2022, utilizing various Intel/LLVM optimizations.
 
 Powershell:
 
