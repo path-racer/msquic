@@ -14,6 +14,7 @@ Then:
 
 `./scripts/build.ps1 -Config Release -Arch x64 -Static -Tls schannel -DisableLogs -DisableTools -DisablePerf -DisableTest -StaticCRT -PGO -Clean`
 
+* Ignore any errors in the console from this previous command.
 * Access .sln in build folder.
 * Set the optimizations to be the same as Path. Be sure in Debug to disable /Qipo, /LTCG, Whole Program Optimization, etc.
 * Build `core` and `platform` projects.
