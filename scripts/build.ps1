@@ -352,6 +352,8 @@ function CMake-Execute([String]$Arguments) {
 function CMake-Generate {
     $Arguments = ""
 
+    $Arguments += " -T ""Intel C++ Compiler 2024"""
+
     if ($Generator.Contains(" ")) {
         $Generator = """$Generator"""
     }
